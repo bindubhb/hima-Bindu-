@@ -1,0 +1,59 @@
+#1.program to print largest of two numbers
+n1=int(input('enter num1:'))
+n2=int(input('enter num2:'))
+n3=int(input('enter num3:'))
+if n1>n2 and n1>n3:
+    print(n1,'n1 is greater')
+elif n2>n3 and n2>n1:
+    print(n2,'n2 is greater')
+elif n3>n1 and n3>n2:
+    print(n3,'n3 is greater')
+#2.program to reverse a string
+a=str(input('enter string:'))
+b=a[::-1]
+if(b==a):
+    print('given string is palindrome')
+else:
+    print('given string is not a palindrome')
+#3.program to check the given number is prime or not
+n=int(input('enter num:'))
+temp=n
+reverse=1
+digit=0
+if(n>1):
+    for i in (2,n):
+        if(n%i==0):
+            print('not prime number')
+            break
+        else:
+            print('prime number')
+            break
+else:
+    print('not prime number')
+#4.program to find palindrome(number) using try except finally
+n=int(input('enter a number:'))
+try:
+    int(n)
+except:
+    print('enter valid input of integer type')
+else:
+    temp=n
+    rev=0
+    while (n>0):
+        digit=n%10
+        rev=rev*10+digit
+        n=n//10
+    if rev==temp:
+        print('palindrome')
+    else:
+        print('not a palindrome')
+finally:
+    print('done')
+#5.program to find sum of the squares of first n natural numbers
+n=int(input('enter n value:'))
+t,s=0,0
+for i in range(1,n+1):
+    s=i*i
+    t=t+s
+    i=i+1
+print('the sum of the squares of first n natural numbers is:',t) 
